@@ -11,9 +11,10 @@ from .subagents.recommender import action_recommender_agent
 from .subagents.hospital import fetch_hospital
 from .subagents.navigation import navigation_agent
 from .subagents.location import fetch_location_agent
+from .subagents.notification import notification_agent
 
 root_agent = SequentialAgent(
     name="LeadQualificationPipeline",
-    sub_agents=[fetch_location_agent, fetch_hospital, action_recommender_agent, navigation_agent],
+    sub_agents=[fetch_location_agent, fetch_hospital, action_recommender_agent, navigation_agent, notification_agent],
     description="A pipeline that validates, scores, and recommends actions for sales leads",
 )
