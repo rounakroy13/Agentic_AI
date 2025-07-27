@@ -28,7 +28,7 @@ def find_nearest_hospitals(latitude: float, longitude: float, api_key: str, radi
         return f"Error fetching data: {data.get('status')}"
     hospitals = data.get("results", [])
     result = []
-    for hospital in hospitals[:5]:
+    for hospital in hospitals[:1]:
         name = hospital.get("name")
         address = hospital.get("vicinity")
         rating = hospital.get("rating", "N/A")
@@ -54,4 +54,5 @@ fetch_hospital = Agent(
     tools=[hospital_tool],
 
     description="FInd nearest Hospital",
+    output_key="hospital_details"
 )

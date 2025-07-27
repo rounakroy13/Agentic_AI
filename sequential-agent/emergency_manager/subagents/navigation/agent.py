@@ -48,8 +48,11 @@ navigation_agent = Agent(
     model=GEMINI_MODEL,
     instruction="""
     You are a helpful assistant that can use the following tool:
-    - Find the navigation root based on the origin_lat = latitude and origin_lng = longitude from {current_location} as origin and the 1st hospital latitude and longitude as destination:
-    - navigation_tool
+    - Find the navigation root based on the {current_location} and {hospital_details}:
+    - I need to navigate to the hospital
+    - use the navigation_tool
+    - return the directions in text format
+    - open the navigation link in Google Maps
     """,
     tools=[navigation_tool],
     description="Get navigation directions from one location to another.",

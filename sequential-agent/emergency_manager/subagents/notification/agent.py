@@ -4,7 +4,7 @@ import os
 
 # Set your Twilio credentials (use environment variables for security)
 TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID", "ACb03f56517f84e7769b7d8da41c6cd9a4")
-TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN", "e5432b34d05fb9dc4a35f5a7cbc9e9a3")
+TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN", "9920dc71707fbd22be785e42e1945579")
 
 def send_sms_notification(message: str, to_number: str) -> str:
     """
